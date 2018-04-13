@@ -11,7 +11,7 @@
             Need help figuring out where to go?
             Use the city search to see where people are going!
           </p>
-          <base-search class="search" />
+          <search class="search" />
         </v-flex>
       </v-layout>
     </v-container>
@@ -19,11 +19,11 @@
 </template>
 
 <script>
-import BaseSearch from '@/components/BaseSearch'
+import Search from '@/components/Search'
 
 export default {
   components: {
-    BaseSearch
+    Search
   }
 }
 </script>
