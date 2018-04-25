@@ -22,6 +22,7 @@ module.exports = {
       }
     ]
   },
+  modules: ['@nuxtjs/axios'],
   plugins: ['~/plugins/vuetify.js'],
   css: ['~/assets/style/app.styl'],
   /*
@@ -34,6 +35,7 @@ module.exports = {
   build: {
     vendor: ['~/plugins/vuetify.js'],
     extractCSS: true,
+    cssSourceMap: false,
     /*
     ** Run ESLint on save
     */

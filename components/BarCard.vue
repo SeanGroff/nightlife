@@ -14,23 +14,27 @@
             <div class="headline">{{ bar.name }}</div>
             <div>{{ bar.description }}</div>
             <v-card-actions>
-              <v-layout row>
-                <v-flex
-                  d-flex
-                  justify-space-between
+              <v-btn
+                color="success"
+                style="{marginRight: auto}"
+                @click="$emit('is-going-click')"
+              >
+                Not Going
+              </v-btn>
+              <v-badge
+                overlap
+                color="orange"
+              >
+                <span slot="badge">
+                  {{ bar.attendees }}
+                </span>
+                <v-icon
+                  medium
+                  color="white lighten-1"
                 >
-                  <v-btn
-                    color="success"
-                    @click="$emit('is-going-click')"
-                  >
-                    Not Going
-                  </v-btn>
-                  <v-badge>
-                    <span slot="badge">{{ bar.attendees }}</span>
-                    <div>Going</div>
-                  </v-badge>
-                </v-flex>
-              </v-layout>
+                  face
+                </v-icon>
+              </v-badge>
             </v-card-actions>
           </div>
         </v-flex>
