@@ -31,7 +31,7 @@
         <v-btn
           flat
           color="info"
-          @click="login"
+          href="http://localhost:3334/auth/google"
         >
           {{ loggedIn ? 'Log out' : 'Login' }}
         </v-btn>
@@ -53,20 +53,6 @@ export default {
     return {
       drawer: false,
       loggedIn: false
-    }
-  },
-  methods: {
-    async login() {
-      try {
-        const { data } = await this.$axios.$get(
-          'http://localhost:3334/auth/google'
-        )
-        // eslint-disable-next-line
-        console.log(data)
-      } catch (err) {
-        // eslint-disable-next-line
-        console.error(err)
-      }
     }
   }
 }
